@@ -12,9 +12,14 @@ const Hero = () => {
                 <h1 className="hero-title">Santanu & Ankita</h1>
                 <p className="hero-date">February 6 & 8, 2026</p>
                 <p className="hero-subtitle" style={{ marginTop: '1rem' }}>
-                    Join us as we celebrate our love
+                    Join us as we begin our forever.
                 </p>
             </div>
+
+            <a href="#about" className="scroll-indicator">
+                <span></span>
+                <span></span>
+            </a>
         </section>
     );
 };

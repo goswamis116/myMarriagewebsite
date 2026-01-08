@@ -5,12 +5,15 @@ const Gallery = () => {
 
     const images = [
         { src: "/images/couple/couple1.png", title: "Together Forever" },
-        { src: "/images/couple/bride.png", title: "The Beautiful Bride" },
-        { src: "/images/couple/groom.png", title: "The Handsome Groom" },
-        { src: "/images/wedding/mandap.png", title: "Sacred Mandap" },
-        { src: "/images/wedding/ceremony.png", title: "Wedding Ceremony" },
-        { src: "/images/venue/outdoor.png", title: "Beautiful Venue" },
+        { src: "/images/couple/couple8.jpg", title: "Together Forever us" },
+        { src: "/images/couple/couple7.jpg", title: "Together Forever" },
+        { src: "/images/couple/couple5.jpg", title: "Together Forever" },
+        { src: "/images/couple/bride3.jpg", title: "The Beautiful Bride" },
+        { src: "/images/couple/didas.jpg", title: "Bride" },
+        { src: "/images/couple/santanufamily.jpg", title: "Groom Family" },
+        { src: "/images/couple/bridefamily.jpg", title: "Bride Family" },
     ];
+    const familyImage = [{ src: "/images/couple/fullfamily.jpg", title: "Together Forever Family" }]
 
     return (
         <section id="gallery" className="section scroll-reveal">
@@ -112,6 +115,37 @@ const Gallery = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+
+            {/* Full Width Family Image */}
+            <div style={{ marginTop: '3rem', width: '100%' }}>
+                <div
+                    className="family-image-item"
+                    style={{
+                        width: '100%',
+                        borderRadius: 'var(--radius-md)',
+                        overflow: 'hidden',
+                        boxShadow: 'var(--shadow-lg)',
+                        border: '2px solid var(--accent-gold)', // Different style: gold border
+                        cursor: 'pointer',
+                        position: 'relative'
+                    }}
+                    onClick={() => setSelectedImage(familyImage[0])}
+                >
+                    <img
+                        src={familyImage[0].src}
+                        alt={familyImage[0].title}
+                        style={{
+                            width: '100%',
+                            height: 'auto', // valid for standard img
+                            display: 'block', // removes bottom space
+                            objectFit: 'contain' // Ensures full image is visible
+                        }}
+                    />
+                    <div className="gallery-overlay">
+                        <span className="gallery-overlay-text">{familyImage[0].title}</span>
+                    </div>
+                </div>
             </div>
 
             {selectedImage && (

@@ -63,9 +63,34 @@ const InvitationCard = () => {
                     </p>
                 </div>
 
-                <div style={{ marginTop: '3rem', textAlign: 'right', fontStyle: 'italic' }}>
-                    <p>ইতি-</p>
-                    <p style={{ fontWeight: 'bold', fontSize: '1.3rem' }}>বিনীত : শ্রী দীননাথ ব্যানার্জ্জী</p>
+                <div style={{
+                    marginTop: '3rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-end',
+                    gap: '1rem'
+                }}>
+                    <div style={{ textAlign: 'right', fontStyle: 'italic' }}>
+                        <p>ইতি-</p>
+                        <p style={{ fontWeight: 'bold', fontSize: '1.3rem' }}>বিনীত : শ্রী দীননাথ ব্যানার্জ্জী</p>
+                    </div>
+
+                    {/* Dada Image */}
+                    <div style={{
+                        width: '80px',
+                        height: '80px',
+                        borderRadius: '50%',
+                        overflow: 'hidden',
+                        border: '3px solid var(--accent-gold)',
+                        boxShadow: 'var(--shadow-md)',
+                        flexShrink: 0
+                    }}>
+                        <img
+                            src="/images/couple/dadu.jpg"
+                            alt="Dinanath Banerjee"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                        />
+                    </div>
                 </div>
             </div>
         </section>

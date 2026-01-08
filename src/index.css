@@ -292,10 +292,14 @@ p {
 
 .hero-subtitle {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
-  font-weight: 300;
+  font-weight: 600;
+  /* Bolder */
+  color: #ffffff;
+  /* Explicit White */
   margin-bottom: 1rem;
-  opacity: 0.95;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  /* Full opacity */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .hero-title {
@@ -309,9 +313,12 @@ p {
 
 .hero-date {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 300;
+  font-weight: 600;
+  /* Bolder */
+  color: #ffffff;
+  /* Explicit White */
   margin-top: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 /* ==================== SECTIONS ==================== */
@@ -873,4 +880,58 @@ p {
 
 .fade-in {
   animation: fadeInUp 0.8s ease;
+}
+
+/* ==================== SCROLL INDICATOR ==================== */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #fff;
+  /* Explicit white */
+  border-right: 2px solid #fff;
+  /* Explicit white */
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: scrollAnimate 2s infinite;
+}
+
+.scroll-indicator span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes scrollAnimate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
 }
