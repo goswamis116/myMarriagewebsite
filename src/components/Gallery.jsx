@@ -7,11 +7,11 @@ const Gallery = () => {
         { src: "/images/couple/couple1.png", title: "Together Forever" },
         { src: "/images/couple/couple8.jpg", title: "Together Forever us" },
         { src: "/images/couple/couple7.jpg", title: "Together Forever" },
-        { src: "/images/couple/couple5.jpg", title: "Together Forever" },
-        { src: "/images/couple/bride3.jpg", title: "The Beautiful Bride" },
-        { src: "/images/couple/didas.jpg", title: "Bride" },
-        { src: "/images/couple/santanufamily.jpg", title: "Groom Family" },
-        { src: "/images/couple/bridefamily.jpg", title: "Bride Family" },
+        //{ src: "/images/couple/couple5.jpg", title: "Together Forever" },
+        //{ src: "/images/couple/bride3.jpg", title: "The Beautiful Bride" },
+        { src: "/images/couple/didas.jpg", title: "" },
+        //{ src: "/images/couple/santanufamily.jpg", title: "Groom Family" },
+        //{ src: "/images/couple/bridefamily.jpg", title: "Bride Family" },
     ];
     const familyImage = [{ src: "/images/couple/fullfamily.jpg", title: "Together Forever Family" }]
 
