@@ -54,11 +54,11 @@ function App() {
     const timer = setTimeout(() => {
       if (window.scrollY === 0) {
         window.scrollBy({
-          top: 350,
+          top: 200,
           behavior: 'smooth'
         });
       }
-    }, 4000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
