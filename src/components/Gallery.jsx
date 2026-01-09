@@ -16,7 +16,7 @@ const Gallery = () => {
     const familyImage = [{ src: "/images/couple/fullfamily.jpg", title: "Together Forever Family" }]
 
     return (
-        <section id="gallery" className="section scroll-reveal">
+        <section id="gallery" className="section scroll-reveal" style={{ paddingBottom: '1rem' }}>
             <h2 className="section-title">Our Gallery</h2>
 
             <div className="video-section" style={{

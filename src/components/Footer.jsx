@@ -1,6 +1,23 @@
 const Footer = () => {
     return (
         <footer className="footer">
+            {/* Simple Emoji Border */}
+            <div className="emoji-border" style={{
+                width: '100%',
+                textAlign: 'center',
+                fontSize: '1.5rem',
+                padding: '0',
+                lineHeight: '1.2',
+                letterSpacing: '0.1rem',
+                color: 'var(--accent-gold)',
+                overflow: 'hidden',
+                whiteSpace: 'nowrap',
+                userSelect: 'none',
+                marginTop: '-1.5rem',
+                marginBottom: '1rem'
+            }}>🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿🌷🌻🌿
+            </div>
+
             <div className="footer-content">
                 <div className="footer-heart">❤️</div>
                 <h2 className="footer-names">Santanu & Ankita</h2>
