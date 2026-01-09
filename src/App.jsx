@@ -49,6 +49,20 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  // Automatic scroll hint for mobile users
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (window.scrollY === 0) {
+        window.scrollBy({
+          top: 350,
+          behavior: 'smooth'
+        });
+      }
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="App">
       <ScrollProgress />

@@ -907,10 +907,10 @@ p {
   display: block;
   width: 20px;
   height: 20px;
-  border-bottom: 2px solid #fff;
-  /* Explicit white */
-  border-right: 2px solid #fff;
-  /* Explicit white */
+  border-top: 2px solid #fff;
+  /* Changed to top */
+  border-left: 2px solid #fff;
+  /* Changed to left */
   transform: rotate(45deg);
   margin: -5px;
   animation: scrollAnimate 2s infinite;
@@ -923,7 +923,8 @@ p {
 @keyframes scrollAnimate {
   0% {
     opacity: 0;
-    transform: rotate(45deg) translate(-20px, -20px);
+    transform: rotate(45deg) translate(0, 0);
+    /* Start at origin */
   }
 
   50% {
@@ -932,6 +933,17 @@ p {
 
   100% {
     opacity: 0;
-    transform: rotate(45deg) translate(20px, 20px);
+    transform: rotate(45deg) translate(0, -20px);
+    /* Move UP (negative Y relative to rotation? No, let's use simple Y) */
+    /* wait, with rotate(45deg), axis is rotated. 
+       Let's stick to using translateY on a wrapper or adjust translate:
+       If rotated 45deg, Top-Left is pointing UP.
+       To move UP visually, we need to move along the new diagonall?
+       Actually, standard 'translate' moves along screen X/Y if applied AFTER rotate? 
+       No, transform order matters.
+       Let's try a simpler approach: rotate first, then translate.
+    */
+    transform: rotate(45deg) translate(-10px, -10px);
+    /* Move diagonally up-left relative to unrotated box, which maps to UP visually */
   }
 }
